@@ -4,15 +4,17 @@ import AuthenticatedRoute from "./authenticated_route";
 import PermittedRouter from "./permitted_router";
 
 import Portal from "../pages/portal";
-import notFound404 from "../pages/not_found_404";
+import NotFound404 from "../pages/not_found_404";
+import NotPermitted from '../pages/not_permitted';
 
 const AppRouter = () => {
   return (
     <BrowserRouter basename="/">
       <Switch>
         <AuthenticatedRoute path="/permitted" component={PermittedRouter} />
+        <Route path="/not_permitted" component={NotPermitted}/>
         <Route exact path="/" component={Portal} />
-        <Route component={notFound404} />
+        <Route component={NotFound404} />
       </Switch>
     </BrowserRouter>
   );

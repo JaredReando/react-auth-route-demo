@@ -30,7 +30,7 @@ const AuthenticatedRoute: React.FC<RouteProps> = ({
                   ) : (
                     <Redirect
                       to={{
-                        pathname: "/",
+                        pathname: "/not_permitted",
                         state: { from: props.location }
                       }}
                     />
