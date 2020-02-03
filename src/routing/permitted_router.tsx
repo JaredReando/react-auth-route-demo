@@ -7,6 +7,9 @@ import User from '../pages/user';
 const PermittedRouter = () => {
   return (
     <BrowserRouter basename="/permitted">
+      <div>
+        links
+      </div>
       <Switch>
         <Route exact path="/" component={Hello} />
         <Route path="/settings" component={Settings} />
